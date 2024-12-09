@@ -147,3 +147,11 @@ body {
     margin: 0;
     z-index: 1;
 }
+.discord a {
+    position: fixed;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1;
+}
