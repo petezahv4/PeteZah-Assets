@@ -1,18 +1,37 @@
-const form = document.getElementById("settings-form");
-const savedSettings = JSON.parse(localStorage.getItem("tabCloakSettings")) || {
-    cloakTitle: "Cloaked Tab Title",
-    cloakFavicon: "favicon-cloak.png"
+const defaultSettings = {
+    cloakTitle: "Velara | Best place to play games at school or work  unblocked ",
+    cloakFavicon: "assets/icons/velara.ico"
 };
 
-document.getElementById("cloak-title").value = savedSettings.cloakTitle;
-document.getElementById("cloak-favicon").value = savedSettings.cloakFavicon;
+const savedSettings = JSON.parse(localStorage.getItem("tabCloakSettings")) || defaultSettings;
 
-form.addEventListener("submit", (e) => {
+const settingsDropdown = document.getElementById("cloak-setting");
+settingsDropdown.value = `${savedSettings.cloakTitle},${savedSettings.cloakFavicon}`;
+
+document.getElementById("settings-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    const newSettings = {
-        cloakTitle: document.getElementById("cloak-title").value,
-        cloakFavicon: document.getElementById("cloak-favicon").value
-    };
+    
+    const [cloakTitle, cloakFavicon] = settingsDropdown.value.split(",");
+
+    const newSettings = { cloakTitle, cloakFavicon };
     localStorage.setItem("tabCloakSettings", JSON.stringify(newSettings));
-    alert("Settings saved!");
+    alert("Settings saved! Changes will apply immediately.");
+
+    
+    updateCloakedTab(newSettings);
+})
+
+document.getElementById("reset-settings").addEventListener("click", () => {
+    localStorage.setItem("tabCloakSettings", JSON.stringify(defaultSettings));
+    settingsDropdown.value = `${defaultSettings.cloakTitle},${defaultSettings.cloakFavicon}`;
+    alert("Settings reset to default!");
+    updateCloakedTab(defaultSettings);
 });
+
+function updateCloakedTab(settings) {
+    document.title = settings.cloakTitle;
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = settings.cloakFavicon;
+    document.head.appendChild(favicon);
+}

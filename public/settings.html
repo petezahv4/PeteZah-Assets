@@ -26,18 +26,21 @@
     </nav>
     <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="264" height="1757"></canvas></div>
     <form id="settings-form">
-        <label for="cloak-title">Cloak Tab Title:</label>
-        <input type="text" id="cloak-title" placeholder="Enter cloaked title" required><br><br>
-
-        <label for="cloak-favicon">Cloak Favicon URL:</label>
-        <input type="url" id="cloak-favicon" placeholder="Enter cloaked favicon URL" required><br><br>
-
+        <label for="cloak-title">Cloaked Setting:</label>
+        <select id="cloak-setting">
+            <option value="Calculator,assets/icons/google.ico">Google</option>
+            <option value="Home,assets/icons/Classroom.ico">Google Classroom</option>
+            <option value="Dashboard,assets/icons/Canvas.ico">Canvas</option>
+        </select><br><br>
         <button type="submit">Save Settings</button>
+        <button type="button" id="reset-settings">Reset to Default</button>
     </form>
-    <script src="scripts/settings.js"></script>
+
     <!-- settings scripts i hope they work :) -->
     <script src="scripts/cloak.js"></script>
+    <script src="scripts/settings.js"></script>
     <!-- other scripts  if these dont work i wanna die-->
     <script src = "scripts/particles.js"></script>
+
 </body>
 </html>
