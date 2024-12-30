@@ -92,10 +92,13 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 176px;
+    margin-top: 200px;
+    padding: 0; /* Ensure there's no extra padding */
+    margin: 0;  /* Remove any unwanted margins */
 }
 
 .top-button {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,24 +123,28 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-
-
 .discord {
     position: fixed;
-    top: 50%;
+    top: calc(15% + 20px);
     left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
+    transform: translateX(-50%);
     z-index: 1;
+    margin: 0;
 }
+
 .discord a {
-    position: fixed;
+    position: absolute;
     top: 105%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
+    transform: translateX(-50%);
     z-index: 1;
 }
+
+
+
+
+
+
 /* game container thing  */
 .game-container {
     width: 300px;
