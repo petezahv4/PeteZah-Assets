@@ -18,7 +18,7 @@ function applySettings(settings) {
 
 applySettings(savedSettings);
 
-document.getElementById("settings-form").addEventListener("submit", (e) => {
+document.getElementById("settings").addEventListener("submit", (e) => {
     e.preventDefault();
     const [cloakTitle, cloakFavicon] = settingsDropdown.value.split(",");
     const newSettings = { cloakTitle, cloakFavicon };

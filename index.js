@@ -11,6 +11,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(cors());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 const routes = [
@@ -28,6 +29,48 @@ routes.forEach(route => {
     app.get(route.path, (req, res) => {
         res.sendFile(path.join(__dirname, "public", route.file));
     });
+});
+
+let conversationHistory = [];
+
+app.post("/api/chat", async (req, res) => {
+    const { message } = req.body;
+
+    if (!message) {
+        return res.status(400).json({ error: "Message is required." });
+    }
+
+    try {
+        const response = await axios.post(
+            "https://api.groq.com/v1/chat/completions",
+            {
+                messages: conversationHistory.map(entry => ({
+                    role: "user",
+                    content: entry.user,
+                })).concat([{ role: "user", content: message }]),
+                model: "llama-3.3-70b-versatile",
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+                },
+            }
+        );
+
+        const modelResponse = response.data.choices[0]?.message?.content || "No response received.";
+
+        conversationHistory.push({ user: message, response: modelResponse });
+
+        if (conversationHistory.length > 20) {
+            conversationHistory.shift();
+        }
+
+        res.json({ response: modelResponse });
+    } catch (error) {
+        console.error("Error communicating with Groq API:", error);
+        res.status(500).json({ error: "Error communicating with Groq API." });
+    }
 });
 
 app.use((req, res) => {
