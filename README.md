@@ -1,5 +1,4 @@
 # Velara
-<img src="https://cdn.discordapp.com/icons/1268087040835321897/10ddbabf94da076b64c288ce57c28786.png">
 
 Velara is an unblocked games/proxy website made for bypassing restrictions anywhere you go, powered by [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet) and [TIW](https://github.com/KwazyMotoo/TIW-Static)
 
@@ -36,6 +35,9 @@ Finally, visit localhost:80 (or just localhost) in your browser!!
 ## Contributing
 
 just like make a pull request idfk
+
+## Discord Server
+<iframe src="https://disc-api-sigma.vercel.app" style="style="outline: none;width: 400px;height: 300px;margin-top: 20px;">
 
 ## Acknowledgments
 
