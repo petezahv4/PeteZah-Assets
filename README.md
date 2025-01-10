@@ -39,7 +39,7 @@ Finally, visit localhost:80 (or just localhost) in your browser!!
 just like make a pull request idfk
 
 ## Discord Server
-<iframe src="https://disc-api-sigma.vercel.app" style="style="outline: none;width: 400px;height: 300px;margin-top: 20px;">
+<a href="https://discord.gg/velara><img src="https://files.catbox.moe/pp7nti.png"></a>
 
 ## Acknowledgments
 
