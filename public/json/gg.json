@@ -1,0 +1,20 @@
+[
+    {
+        "name": "1v1.lol",
+        "imgpath": "1v1lol.png",
+        "link": "/hosted/1v1lol/index.html",
+        "category": "Shooter"
+    },
+    {
+        "name": "1",
+        "imgpath": "1.png",
+        "link": "/hosted/1/index.html",
+        "category": "Strategy/Quiz/Puzzle"
+    },
+    {
+        "name": "1v1.lol hacked",
+        "imgpath": "1v1hacks.png",
+        "link": "https://www.1v1.lat",
+        "category": "Shooter"
+    }
+]

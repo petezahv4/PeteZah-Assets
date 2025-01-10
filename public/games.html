@@ -7,13 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    
 </head>
 <body>
     <div id="particles-js"></div>
     <nav class="navbar">
         <ul class="navbar-links left">
-            <li><a href="/"><span class="material-icons"></span> VELARA</a></li>
+            <li><a href="/realindex.html"><span class="material-icons"></span> VELARA </a></li>
         </ul>
         <ul class="navbar-links right">
             <li><a href="/r"><span class="material-icons">smart_toy</span> AI</a></li>
@@ -25,21 +24,97 @@
         </ul>
     </nav>
     <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="264" height="1757"></canvas></div>
-    <div class="grid">
-    <div class="game-container">
-        <a href="placeholder"></a>
-        <div class="game-img"><img src="assets/game-imgs/placeholder.png" alt="game img"></div>
-        <div class="game-name">s</div>
+
+    <div class="controls">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <select id="category-selector">
+            <option value="">All Categories</option>
+        </select>
     </div>
-    <div class="game-container">
-        <a href="placeholder"></a>
-        <div class="game-img"><img src="assets/game-imgs/placeholder.png" alt="game img"></div>
-        <div class="game-name">s</div>
+
+    <div class="grid" id="game-grid">
+        <!-- games are loaded here -->
     </div>
-</div>
-    <!-- settings scripts i hope they work :) -->
+
+    <!-- settings scripts -->
     <script src="scripts/cloak.js"></script>
-    <!-- other scripts  if these dont work i wanna die-->
-    <script src = "scripts/particles.js"></script>
+    <!-- other scripts -->
+    <script src="scripts/particles.js"></script>
+
+    <script>
+        async function loadGames() {
+            try {
+                const response = await fetch('/json/gg.json');
+                const games = await response.json();
+                const gameGrid = document.getElementById('game-grid');
+                const categorySelector = document.getElementById('category-selector');
+
+                games.sort((a, b) => a.name.localeCompare(b.name));
+
+                const categories = new Set(games.map(game => game.category));
+                categories.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = category;
+                    categorySelector.appendChild(option);
+                });
+
+                function displayGames(filteredGames) {
+                    gameGrid.innerHTML = '';
+                    filteredGames.forEach(game => {
+                        const gameContainer = document.createElement('div');
+                        gameContainer.classList.add('game-container');
+
+                        const gameLink = document.createElement('a');
+                        gameLink.href = `iframe.html?url=${game.link}`;
+
+                        const gameImgDiv = document.createElement('div');
+                        gameImgDiv.classList.add('game-img');
+                        const gameImg = document.createElement('img');
+                        gameImg.src = `assets/game-imgs/${game.imgpath}`;
+
+                        const gameNameDiv = document.createElement('div');
+                        gameNameDiv.classList.add('game-name');
+                        gameNameDiv.textContent = game.name;
+
+                        gameImgDiv.appendChild(gameImg);
+                        gameLink.appendChild(gameImgDiv);
+                        gameLink.appendChild(gameNameDiv);
+                        gameContainer.appendChild(gameLink);
+                        gameGrid.appendChild(gameContainer);
+                    });
+                }
+
+                displayGames(games);
+
+                const searchBar = document.getElementById('search-bar');
+                searchBar.addEventListener('input', () => {
+                    const searchTerm = searchBar.value.toLowerCase();
+                    const selectedCategory = categorySelector.value;
+                    const filteredGames = games.filter(game => {
+                        const matchesName = game.name.toLowerCase().includes(searchTerm);
+                        const matchesCategory = selectedCategory === '' || game.category === selectedCategory;
+                        return matchesName && matchesCategory;
+                    });
+                    displayGames(filteredGames);
+                });
+
+                categorySelector.addEventListener('change', () => {
+                    const searchTerm = searchBar.value.toLowerCase();
+                    const selectedCategory = categorySelector.value;
+                    const filteredGames = games.filter(game => {
+                        const matchesName = game.name.toLowerCase().includes(searchTerm);
+                        const matchesCategory = selectedCategory === '' || game.category === selectedCategory;
+                        return matchesName && matchesCategory;
+                    });
+                    displayGames(filteredGames);
+                });
+            } catch (error) {
+                console.error('Error loading games:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadGames);
+    </script>
 </body>
 </html>
