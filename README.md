@@ -1,3 +1,5 @@
+<div align="center">
+
 # Velara
 
 Velara is an unblocked games/proxy website made for bypassing restrictions anywhere you go, powered by [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet) and [TIW](https://github.com/KwazyMotoo/TIW-Static)
@@ -46,3 +48,5 @@ just like make a pull request idfk
 
 ## License
 // reesaldle please add this later
+<div align="center">
+
