@@ -39,7 +39,7 @@ Finally, visit localhost:80 (or just localhost) in your browser!!
 just like make a pull request idfk
 
 ## Discord Server
-[<img src="https://files.catbox.moe/pp7nti.png" width="300px" height="100px">](https://discord.gg/velara)
+[<img src="https://files.catbox.moe/pp7nti.png" width="300px" height="75px">](https://discord.gg/velara)
 
 ## Acknowledgments
 
