@@ -1,5 +1,5 @@
 # Velara
-<img src
+<img src="https://cdn.discordapp.com/icons/1268087040835321897/10ddbabf94da076b64c288ce57c28786.png">
 
 Velara is an unblocked games/proxy website made for bypassing restrictions anywhere you go, powered by [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet) and [TIW](https://github.com/KwazyMotoo/TIW-Static)
 
