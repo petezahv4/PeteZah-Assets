@@ -44,7 +44,7 @@ just like make a pull request idfk
 ## Acknowledgments
 
 * [Reesaldle](https://github.com/reesaldle-dev) - Owner/Developer
-* [Szvy](https://github.com/szvy) - Developer, also cool af
+* [Szvy](https://github.com/szvy) - Developer, also WOKE af
 
 ## License
 // reesaldle please add this later
