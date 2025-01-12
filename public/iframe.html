@@ -28,15 +28,19 @@
     </style>
 </head>
 <body>
-    <div id="iframe-container">
-        <iframe id="goonframe" src="404frame.html"></iframe>
-        <div id="footer">
-            <div class="controls">
-                <button id="refresh">🔄 Refresh</button>
-                <button id="fullscreen">⛶ Fullscreen</button>
-            </div>
+    <div id="gameframe">
+        <div class="game">
+          <iframe id="goonframe" src="404frame.html"></iframe>
+          <div class="options">
+            <button id="refresh" aria-label="Refresh">
+              <span class="material-icons">refresh</span>
+            </button>
+            <button id="fullscreen" aria-label="Fullscreen">
+              <span class="material-icons">fullscreen</span>
+            </button>
+          </div>
         </div>
-    </div>
+      </div>
 
     <script>
         function getUrlParameter(name) {
@@ -74,7 +78,9 @@
                 iframe.msRequestFullscreen();
             }
         });
-    </script>    
+    </script> 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"
+    crossorigin="anonymous"></script>   
        <!-- settings scripts i hope they work :) -->
     <script src="scripts/cloak.js"></script>
     <script src = "scripts/cloak.js" type = "application/javascript" ></script>
