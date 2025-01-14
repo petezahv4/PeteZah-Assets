@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/typing.css">
+    <link rel="stylesheet" href="styles/particles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R26WEY1GMN"></script>
 <script>
@@ -16,9 +19,10 @@
     <title></title>
 </head>
 <body>
+    <div id="particles-js"></div>
     <nav class="navbar">
         <ul class="navbar-links left">
-            <li><a href="/realindex.html"><span class="material-icons"></span> VELARA </a></li>
+            <li><a href="/"><span class="material-icons"></span> VELARA</a></li>
         </ul>
         <ul class="navbar-links right">
             <li><a href="/m"><span class="material-icons">movie</span> MOVIES</a></li>
@@ -28,31 +32,14 @@
             <li><a href="/s"><span class="material-icons">settings</span>SETTINGS</a></li>
         </ul>
     </nav>
-    <div>
-      <div class="search-bar">
-         <form id="uv-form">
-             <input style="text-align: center;" id="uv-search-engine" value="https://google.com/search?q=%s" type="hidden"/> 
-             <input id="uv-address" type="text" placeholder="Search with Google or enter a URL..."/>
-         </form>
-         <div class="desc left-margin">
-             <p id="uv-error"></p>
-             <pre id="uv-error-code"></pre>
-     </div>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="264" height="1757"></canvas></div>
+
     <!-- settings scripts i hope they work :) -->
     <script src="scripts/cloak.js"></script>
-    <script src="scripts/settings.js"></script>
     <!-- other scripts  if these dont work i wanna die-->
-    <script src="/static/uv/uv.bundle.js" defer></script>
-    <script src="/static/uv/uv.config.js" defer></script>
-    <script src="/static/uv/uv.handler.js"></script>
-    <script src="/static/uv/uv.sw.js" defer></script>
-    <script src="/static/register-sw.js" defer></script>
-    <script src="/static/search.js" defer></script>
-    <script src="/static/index.js" defer></script>
-    <script>
-        window.onload = function() {
-            document.getElementById("uv-register-sw").value = "Register service worker";
-        }
-    </script>
+    <script src ="scripts/particles.js"></script>
+    <script src="scripts/random-texts.js"></script>
+    <script src="scripts/ads.js"></script>
+    </div>
 </body>
 </html>
