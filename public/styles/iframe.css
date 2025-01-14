@@ -58,3 +58,14 @@
     color: white;
     font-size: 20px;
   }
+  
+  .ad_right, .ad_left {
+    flex: 1;
+    padding: 10px;
+}
+.ad_right {
+    text-align: right;
+}
+.ad_left {
+    text-align: left;
+}
