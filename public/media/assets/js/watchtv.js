@@ -19,7 +19,7 @@ async function getTVShowData() {
     const show = await response.json();
 
     const filteredSeasons = show.seasons.filter(
-      (season) => season.name !== "Specials"
+      (season) => season.name !== "Specials",
     );
     populateSeasonSelector(filteredSeasons, season, episode);
   } catch (error) {

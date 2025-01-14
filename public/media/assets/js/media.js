@@ -59,7 +59,7 @@ async function searchMedia(searchQuery) {
     bigDiv.appendChild(resultsContainer);
 
     data.results.forEach((movie) =>
-      createAndDisplayCard(movie, resultsContainer)
+      createAndDisplayCard(movie, resultsContainer),
     );
 
     if (resultsContainer.innerHTML.trim() === "") {

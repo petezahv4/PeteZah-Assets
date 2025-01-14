@@ -15,6 +15,11 @@ else if (/android/i.test(userAgent)) {
 }
 
 // iOS
-else if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform))) {
+else if (
+  (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) ||
+  (navigator.maxTouchPoints &&
+    navigator.maxTouchPoints > 2 &&
+    /MacIntel/.test(navigator.platform))
+) {
   // window.location.replace("https://apps.apple.com/app/id1508620125");
 }

@@ -1,6 +1,6 @@
 async function displayPopular() {
   const response = await fetch(
-    "https://api.themoviedb.org/3/trending/all/week?api_key=9a2954cb0084e80efa20b3729db69067"
+    "https://api.themoviedb.org/3/trending/all/week?api_key=9a2954cb0084e80efa20b3729db69067",
   );
   const data = await response.json();
   const popular = data.results;
@@ -51,7 +51,7 @@ async function displayPopular() {
 }
 async function displayMovies() {
   const response = await fetch(
-    "https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=9a2954cb0084e80efa20b3729db69067"
+    "https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=9a2954cb0084e80efa20b3729db69067",
   );
   const data = await response.json();
   const popular = data.results;
@@ -102,7 +102,7 @@ async function displayMovies() {
 }
 async function displayTV() {
   const response = await fetch(
-    "https://api.themoviedb.org/3/trending/tv/day?language=en-US&api_key=9a2954cb0084e80efa20b3729db69067"
+    "https://api.themoviedb.org/3/trending/tv/day?language=en-US&api_key=9a2954cb0084e80efa20b3729db69067",
   );
   const data = await response.json();
   const popular = data.results;

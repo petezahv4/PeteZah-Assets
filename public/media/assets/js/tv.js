@@ -1,6 +1,6 @@
 async function displayMovies(page) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=9a2954cb0084e80efa20b3729db69067`
+    `https://api.themoviedb.org/3/discover/tv?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=9a2954cb0084e80efa20b3729db69067`,
   );
   const data = await response.json();
   const popular = data.results;
