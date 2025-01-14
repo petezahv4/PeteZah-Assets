@@ -4,6 +4,7 @@ body {
     background-color: #121212;
     color: #ffffff;
 }
+
 .settings {
     display: grid;
     grid-template-columns: 1fr;
@@ -18,7 +19,6 @@ body {
     color: #ffffff;
     margin: 30px auto;
 }
-
 
 .settings label {
     display: block;
@@ -66,9 +66,6 @@ body {
 .settings button:first-child {
     margin-right: 10px;
 }
-
-
-
 
 .random-texts {
     font-size: 1.2rem;
@@ -137,7 +134,6 @@ body {
 
 }
 
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -186,6 +182,7 @@ body {
     background-color: #2e2e2e;
     transition: all 0.3s ease;
     box-sizing: border-box;
+    z-index: 9999;
 }
 
 .top-button:hover {
@@ -206,7 +203,6 @@ body {
     z-index: 1;
 }
 
-
 .discord a {
     position: absolute;
     top: 105%;
@@ -214,6 +210,7 @@ body {
     transform: translateX(-50%);
     z-index: 1;
 }
+
 
 @media (max-width: 768px) {
     .top-buttons {
@@ -230,8 +227,10 @@ body {
     }
 }
 
+
 @media (min-width: 769px) and (max-width: 1200px) {
     .top-buttons {
+        flex-direction: row;
         gap: 15px;
         margin-top: 150px;
     }
@@ -242,6 +241,7 @@ body {
         font-size: 1.5rem;
     }
 }
+
 
 /* game container thing  */
 .game-container {
