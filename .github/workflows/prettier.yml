@@ -1,21 +1,23 @@
-name: Prettier Check
+name: Prettier Code Formatter
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
-  prettier-check:
+  prettier:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Run Prettier
+        uses: creyD/prettier_action@v4.3
         with:
           node-version: '16'
 
