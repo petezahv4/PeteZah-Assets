@@ -18,7 +18,7 @@ const routes = [
   { path: "/g", file: "games.html" },
   { path: "/a", file: "apps.html" },
   { path: "/s", file: "settings.html" },
-  { path: "/m", file: "media.html" },
+  { path: "/m", file: "/media/media.html" },
   { path: "/!", file: "search.html" },
   { path: "/404", file: "404.html" },
 ];
