@@ -1,0 +1,38 @@
+[
+    {
+      "name": "YouTube",
+      "imgpath": "youtube.png",
+      "link": "https://www.youtube.com/"
+    },
+    {
+      "name": "Google",
+      "imgpath": "google.png",
+      "link": "https://www.google.com/"
+    },
+    {
+      "name": "TikTok",
+      "imgpath": "tiktok.png",
+      "link": "https://www.tiktok.com/"
+    },
+    {
+      "name": "Instagram",
+      "imgpath": "instagram.png",
+      "link": "https://www.instagram.com/"
+    },
+    {
+      "name": "Snapchat",
+      "imgpath": "snapchat.png",
+      "link": "https://www.snapchat.com/"
+    },
+    {
+      "name": "Discord",
+      "imgpath": "discord.png",
+      "link": "https://discord.com/"
+    },
+    {
+      "name": "Facebook",
+      "imgpath": "facebook.png",
+      "link": "https://www.facebook.com/"
+    }
+]
+
