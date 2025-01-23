@@ -1,7 +1,7 @@
 #gameframe {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 70px auto 0; 
   background: #2a2a2a;
   border-radius: 8px;
   overflow: hidden;
@@ -71,3 +71,8 @@
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  #gameframe {
+    margin: 120px auto 20px; 
+  }
+}

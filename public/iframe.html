@@ -118,6 +118,20 @@
             }
         });
     </script> 
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.navbar');
+  const gameframe = document.getElementById('gameframe');
+  
+  if (navbar && gameframe) {
+    const navbarHeight = navbar.offsetHeight + 
+                        parseInt(getComputedStyle(navbar).marginTop) + 
+                        parseInt(getComputedStyle(navbar).marginBottom);
+    
+    gameframe.style.marginTop = `${navbarHeight + 20}px`; 
+  }
+});
+    </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"
     crossorigin="anonymous"></script>   
        <!-- settings scripts i hope they work :) -->
