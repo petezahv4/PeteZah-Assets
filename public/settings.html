@@ -23,7 +23,7 @@
 
       gtag("config", "G-R26WEY1GMN");
     </script>
-    <title></title>
+    <title>Velara</title>
   </head>
   <body>
     <div id="particles-js"></div>
@@ -63,26 +63,187 @@
         height="1757"
       ></canvas>
     </div>
-    <div class="settings">
-      <form id="settings">
-        <label for="cloak-title">Cloak</label>
-        <select id="cloak-setting">
-          <option value="Calculator,assets/icons/google.ico">Google</option>
-          <option value="Home,assets/icons/Classroom.ico">
-            Google Classroom
-          </option>
-          <option value="Dashboard,assets/icons/Canvas.ico">
-            Canvas
-          </option></select
-        ><br /><br />
-        <button type="submit">Save Settings</button>
-        <button type="button" id="reset-settings">Reset to Default</button>
-      </form>
+
+    <!-- Settings Container -->
+    <div class="settings-container">
+      <!-- Panic Key Settings -->
+      <section id="panicKeySettings" class="settings-section">
+        <h2>Panic Key Settings</h2>
+        <p id="currentPanicKey">Current Panic Key: 2</p>
+        <p id="instruction">Press the button below to change your panic key.</p>
+        <button onclick="changePanicKey()">Change Panic Key</button>
+      </section>
+
+      <!-- Tab Customization -->
+      <section id="tabCustomization" class="settings-section">
+        <h2>Tab Customization</h2>
+        <form id="tabForm">
+          <label for="tabTitle">Tab Title:</label>
+          <input
+            type="text"
+            id="tabTitle"
+            name="tabTitle"
+            placeholder="Enter new tab title"
+          />
+
+          <label for="tabFavicon">Tab Favicon:</label>
+          <label for="tabFavicon" class="file-upload-label">
+            <span>Choose File</span>
+            <input
+              type="file"
+              id="tabFavicon"
+              name="tabFavicon"
+              accept="image/png, image/jpeg"
+              class="file-upload-input"
+            />
+          </label>
+
+          <button type="submit">Update Tab</button>
+          <button type="button" id="resetTab">Reset Tab</button>
+        </form>
+      </section>
+
+      <!-- Debug Mode -->
+      <section id="debugMode" class="settings-section">
+        <h2>Debug Mode</h2>
+        <p>Gives stats about the current page and performance.</p>
+        <button onclick="toggleDebugMode()">Enter Debug Mode</button>
+        <p>Debug mode inspired by Frogies Arcade.</p>
+        <div id="debugStats" style="display: none;">
+          <p>FPS: <span id="fps">0</span></p>
+          <p>CPU: <span id="cpu">0%</span></p>
+        </div>
+      </section>
     </div>
-    <!-- settings scripts i hope they work :) -->
+
+    
+    <!-- Scripts -->
+    <script>
+      // Load saved tab title and favicon on page load
+      window.addEventListener("load", function () {
+        const savedTitle = localStorage.getItem("tabTitle");
+        const savedFavicon = localStorage.getItem("favicon");
+
+        if (savedTitle) {
+          document.title = savedTitle;
+          document.getElementById("tabTitle").value = savedTitle;
+        }
+
+        if (savedFavicon) {
+          const favicon = document.getElementById("favicon");
+          favicon.href = savedFavicon;
+        }
+      });
+
+      // Display current Panic Key
+      document.getElementById("currentPanicKey").innerText =
+        "Current Panic Key: " + (localStorage.getItem("panicKey") || "2");
+
+      // Change Panic Key Function
+      function changePanicKey() {
+        const newKey = prompt("Enter your new Panic Key:");
+        if (newKey) {
+          localStorage.setItem("panicKey", newKey);
+          document.getElementById("currentPanicKey").innerText =
+            "Current Panic Key: " + newKey;
+          alert("Panic Key updated successfully!");
+        }
+      }
+
+      // Tab Customization Form Handling
+      const tabForm = document.getElementById("tabForm");
+      tabForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const newTitle = document.getElementById("tabTitle").value;
+        const faviconInput = document.getElementById("tabFavicon");
+
+        if (newTitle) {
+          document.title = newTitle;
+          localStorage.setItem("tabTitle", newTitle);
+        }
+
+        if (faviconInput.files && faviconInput.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            const favicon = document.getElementById("favicon");
+            favicon.href = event.target.result;
+            localStorage.setItem("favicon", event.target.result);
+          };
+          reader.readAsDataURL(faviconInput.files[0]);
+        }
+
+        alert("Tab customization updated!");
+      });
+
+      // Reset Tab Functionality
+      const resetTabButton = document.getElementById("resetTab");
+      resetTabButton.addEventListener("click", function () {
+        // Reset tab title
+        document.title = "Velara"; // Default title
+        localStorage.removeItem("tabTitle");
+        document.getElementById("tabTitle").value = "";
+
+        // Reset favicon
+        const favicon = document.getElementById("favicon");
+        favicon.href = "favicon.ico"; // Default favicon
+        localStorage.removeItem("favicon");
+
+        alert("Tab customization reset to default!");
+      });
+
+      // Debug Mode Functionality
+      let animationFrameId;
+      let lastFrameTime = performance.now();
+      let fpsCounter = document.getElementById("fps");
+      let cpuCounter = document.getElementById("cpu");
+
+      function toggleDebugMode() {
+        const debugStats = document.getElementById("debugStats");
+        if (debugStats.style.display === "none") {
+          debugStats.style.display = "block";
+          startDebugging(); // Start FPS and CPU monitoring
+        } else {
+          debugStats.style.display = "none";
+          stopDebugging(); // Stop FPS and CPU monitoring
+        }
+      }
+
+      function startDebugging() {
+        lastFrameTime = performance.now(); // Reset the frame time
+        updateFPS();
+      }
+
+      function stopDebugging() {
+        cancelAnimationFrame(animationFrameId);
+      }
+
+      function updateFPS() {
+        const now = performance.now();
+        const delta = now - lastFrameTime;
+        const fps = Math.round(1000 / delta);
+        lastFrameTime = now;
+
+        let cpuUsage = 0;
+        const memory = performance.memory;
+        if (memory) {
+          const usedMemory =
+            (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100;
+          cpuUsage = Math.round(usedMemory);
+        }
+
+        // Update the FPS and CPU counters
+        fpsCounter.textContent = fps;
+        cpuCounter.textContent = cpuUsage + "%";
+
+        // Request the next frame
+        animationFrameId = requestAnimationFrame(updateFPS);
+      }
+    </script>
+
+    <!-- Other Scripts -->
     <script src="scripts/cloak.js"></script>
     <script src="scripts/settings.js"></script>
-    <!-- other scripts  if these dont work i wanna die-->
     <script src="scripts/particles.js"></script>
+    <script src="scripts/panic.js"></script>
   </body>
 </html>

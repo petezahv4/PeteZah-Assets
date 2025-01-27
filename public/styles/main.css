@@ -10,47 +10,88 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #121212;
   color: #ffffff;
+  overflow: hidden;
+}
+/* Style for the H1 (Welcome to VELARA) */
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  margin-top: 180px; /* Added margin-top for spacing */
 }
 
-.settings {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  width: 320px;
-  height: 220px;
+/* Style for the H2 (MOTD / Splash Text) */
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  margin-bottom: 20px; /* Added margin-bottom for spacing */
+}
+
+#uv-form {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+#uv-address {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#uv-address:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.25);
+}
+
+/* Settings Container */
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 150px auto;
   padding: 20px;
   background-color: #1e1e1e;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
-  margin: 30px auto;
 }
 
-.settings label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-  text-align: center;
-}
-
-.settings select {
-  width: 100%;
-  padding: 12px;
+/* Settings Section */
+.settings-section {
   background-color: #2c2c2c;
-  border: 1px solid #444444;
-  border-radius: 6px;
-  font-size: 16px;
-  color: #ffffff;
-  outline: none;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.settings select:focus {
-  border-color: #555555;
+.settings-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.settings button {
-  padding: 15px 25px;
+.settings-section p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #cccccc;
+}
+
+.settings-section button {
+  padding: 10px 20px;
   background-color: #333333;
   color: #ffffff;
   font-size: 16px;
@@ -60,12 +101,12 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.settings button:hover {
+.settings-section button:hover {
   background-color: #444444;
   transform: scale(1.05);
 }
 
-.settings button:active {
+.settings-section button:active {
   background-color: #555555;
   transform: scale(1);
 }
@@ -79,6 +120,69 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin-top: 10px;
+}
+
+#tabForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tabForm label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#tabForm input {
+  padding: 10px;
+  background-color: #2c2c2c;
+  border: 1px solid #444444;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+}
+
+#tabForm input:focus {
+  border-color: #555555;
+}
+
+/* Debug Stats Styling */
+#debugStats {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+#debugStats p {
+  margin: 5px 0;
+}
+
+/* Hide the default file input */
+.file-upload-input {
+  display: none; /* Hide the default file input */
+}
+
+/* Style the custom file upload box */
+.file-upload-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.file-upload-label:hover {
+  background-color: #444444;
+  transform: scale(1.01);
+}
+
+.file-upload-label:active {
+  background-color: #555555;
+  transform: scale(1);
 }
 
 .navbar {
@@ -386,3 +490,42 @@ body {
   border-color: #555555;
 }
 
+/* Autocomplete Suggestions */
+/* Autocomplete Suggestions */
+.autocomplete-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.autocomplete-suggestions div {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.autocomplete-suggestions div:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-suggestions div:hover {
+  background-color: #f0f0f0;
+}
+/* Error Message Styles */
+.desc {
+  text-align: center;
+  margin-top: 10px;
+  color: #ff0000;
+  font-size: 14px;
+}

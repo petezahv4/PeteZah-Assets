@@ -1,14 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/particles.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>VELARA - Explore Entertainment</title>
+    <!-- Custom CSS for H1 and H2 -->
+    <link rel="stylesheet" href="styles/custom.css" />
   </head>
   <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
       <ul class="navbar-links left">
         <li>
@@ -26,25 +30,39 @@
           <a href="/a"><span class="material-icons">apps</span> APPS</a>
         </li>
         <li>
-          <a href="/!"><span class="material-icons">search</span>SEARCH</a>
+          <a href="/!"><span class="material-icons">search</span> SEARCH</a>
         </li>
         <li>
-          <a href="/s"><span class="material-icons">settings</span>SETTINGS</a>
+          <a href="/s"><span class="material-icons">settings</span> SETTINGS</a>
         </li>
       </ul>
     </nav>
+
+    <!-- Particles.js Background -->
     <div id="particles-js">
       <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%" width="264" height="1757"></canvas>
     </div>
+
+    <!-- Main Content -->
     <div style="text-align: center">
+      <!-- Heading -->
+      <h1>Welcome to VELARA</h1>
+
+      <!-- Message of the Day -->
+      <h2 id="random-texts">Loading...</h2>
+
+      <!-- Top Buttons -->
       <div class="top-buttons">
         <a href="/!" class="top-button">Search</a>
         <a href="/g" class="top-button">Games</a>
       </div>
 
+      <!-- Discord CTA -->
       <div class="discord">
         <a href="https://discord.gg/nowgg" target="_blank" class="discord-button">Join The Discord</a>
       </div>
+
+      <!-- Ad Section -->
       <div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418" crossorigin="anonymous"></script>
         <!-- homepage-ad-left -->
@@ -53,19 +71,20 @@
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
-      <!-- settings scripts i hope they work :) -->
+
+      <!-- Scripts -->
       <script src="scripts/cloak.js"></script>
-      <!-- other scripts  if these dont work i wanna die-->
       <script src="scripts/particles.js"></script>
       <script src="scripts/random-texts.js"></script>
+      <script>
+        window.onload = () => {
+          console.log("Don't skid");
+        };
+      </script>
     </div>
   </body>
 </html>
-<script>
-  window.onload = () => {
-    console.log("Don't skid");
-  };
-</script>
+
 <!--
 
 DON'T FUCKING SKID
