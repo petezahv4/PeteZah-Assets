@@ -1,24 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/typing.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R26WEY1GMN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R26WEY1GMN');
-</script>
-    <title></title>
+    <title>Search Bar with Autocomplete</title>
+    <link rel="stylesheet" href="styles/search.css"> <!-- Link to the CSS file -->
 </head>
 <body>
     <nav class="navbar">
         <ul class="navbar-links left">
-            <li><a href="/realindex.html"><span class="material-icons"></span> VELARA </a></li>
+            <li><a href="/index.html"><span class="material-icons"></span> VELARA </a></li>
         </ul>
         <ul class="navbar-links right">
             <li><a href="/m"><span class="material-icons">movie</span> MOVIES</a></li>
@@ -28,20 +22,20 @@
             <li><a href="/s"><span class="material-icons">settings</span>SETTINGS</a></li>
         </ul>
     </nav>
-    <div>
-      <div class="search-bar">
-         <form id="uv-form">
-             <input style="text-align: center;" id="uv-search-engine" value="https://google.com/search?q=%s" type="hidden"/> 
-             <input id="uv-address" type="text" placeholder="Search with Google or enter a URL..."/>
-         </form>
-         <div class="desc left-margin">
-             <p id="uv-error"></p>
-             <pre id="uv-error-code"></pre>
-     </div>
-    <!-- settings scripts i hope they work :) -->
+    <div class="search-bar">
+        <form id="uv-form">
+            <input id="uv-search-engine" value="https://google.com/search?q=%s" type="hidden" />
+            <input id="uv-address" type="text" placeholder="Search with Google or enter a URL..." />
+        </form>
+        <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="scripts/cloak.js"></script>
     <script src="scripts/settings.js"></script>
-    <!-- other scripts  if these dont work i wanna die-->
     <script src="/static/uv/uv.bundle.js" defer></script>
     <script src="/static/uv/uv.config.js" defer></script>
     <script src="/static/uv/uv.handler.js"></script>
@@ -49,10 +43,6 @@
     <script src="/static/register-sw.js" defer></script>
     <script src="/static/search.js" defer></script>
     <script src="/static/index.js" defer></script>
-    <script>
-        window.onload = function() {
-            document.getElementById("uv-register-sw").value = "Register service worker";
-        }
-    </script>
+    <script src="scripts/autocomplete.js" defer></script> <!-- Link to the autocomplete JS -->
 </body>
 </html>
