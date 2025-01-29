@@ -3,6 +3,8 @@
   <head>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/particles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -58,14 +60,8 @@
         </li>
       </ul>
     </nav>
-    <div id="particles-js">
-      <canvas
-        class="particles-js-canvas-el"
-        style="width: 100%; height: 100%"
-        width="264"
-        height="1757"
-      ></canvas>
-    </div>
+    <div id="particles-js"></div>
+
 
     <div class="controls">
       <input type="text" id="search-bar" placeholder="Search..." />
@@ -80,10 +76,14 @@
 
     <!-- settings scripts i hope they work :) -->
     <script src="scripts/cloak.js"></script>
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/cloak.js"></script>
+    <script src="scripts/panic.js"></script>
     <!-- other scripts  if these dont work i wanna die-->
-    <script src ="scripts/particles.js"></script>
+    <script src="scripts/particles.js"></script>
     <script src="scripts/random-texts.js"></script>
-    <script src="scripts/ads.js"></script>
+
+>    
     <script>
       async function loadGames() {
         try {

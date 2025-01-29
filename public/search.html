@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/typing.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Search Bar with Autocomplete</title>
     <link rel="stylesheet" href="styles/search.css"> 
@@ -25,7 +25,7 @@
     <div class="search-bar">
         <form id="uv-form">
             <input id="uv-search-engine" value="https://google.com/search?q=%s" type="hidden" />
-            <input id="uv-address" type="text" placeholder="Search with Google or enter a URL..." />
+            <input id="uv-address" type="text" placeholder="Search with Google or enter a URL..." autocomplete="off" />
         </form>
         <div class="desc left-margin">
             <p id="uv-error"></p>
@@ -35,7 +35,8 @@
 
         <!-- settings scripts-->
     <script src="scripts/cloak.js"></script>
-    <script src="scripts/settings.js"></script>
+    <script src="scripts/settings.js"></script>   
+    <script src="scripts/autocomplete.js" defer></script> 
         <!-- scripts -->
     <script src="/static/uv/uv.bundle.js" defer></script>
     <script src="/static/uv/uv.config.js" defer></script>
@@ -44,6 +45,6 @@
     <script src="/static/register-sw.js" defer></script>
     <script src="/static/search.js" defer></script>
     <script src="/static/index.js" defer></script>
-    <script src="scripts/autocomplete.js" defer></script> 
+
 </body>
 </html>

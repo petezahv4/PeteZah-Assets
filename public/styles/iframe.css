@@ -76,3 +76,6 @@
     margin: 120px auto 20px; 
   }
 }
+html, body {
+  overflow: hidden;
+}

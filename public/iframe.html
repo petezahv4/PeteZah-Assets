@@ -9,16 +9,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R26WEY1GMN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    
+    <!-- ad switching script -->
+    <script>
+        const mainLinks = [
+            'https://minoritymath.buzz/',
+            'https://ilovelittlekids.buzz/',
+            'https://velara.buzz/',
+            'https://velara.cc/',
+            'https://sunsett.icu/',
+            'https://sunsett.cc/',
+            'https://gyattmath.buzz/',
+            'https://mathforkids.buzz/',
+            'https://velaramath.buzz/',
+        ]
 
-  gtag('config', 'G-R26WEY1GMN');
-</script>
+
+        const currentUrl = window.location.href;
+
+        function loadAdSense() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+            
+            window.addEventListener('load', () => {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            });
+        }
+
+        function loadAdsterra() {
+            const adContainers = document.querySelectorAll('.ad_right, .ad_left');
+            adContainers.forEach(container => {
+                container.innerHTML = '';
+            });
+
+            const configScript = document.createElement('script');
+            configScript.textContent = `
+                atOptions = {
+                    'key' : '78750820a236b42fa5dc2e228cad63a6',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+            `;
+            document.head.appendChild(configScript);
+
+            adContainers.forEach(container => {
+                const invokeScript = document.createElement('script');
+                invokeScript.src = '//www.highperformanceformat.com/78750820a236b42fa5dc2e228cad63a6/invoke.js';
+                container.appendChild(invokeScript);
+            });
+        }
+
+        if (currentUrl === mainLink) {
+            loadAdSense();
+        } else {
+            loadAdsterra();
+        }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R26WEY1GMN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R26WEY1GMN');
+    </script>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -34,53 +94,39 @@
             <li><a href="/s"><span class="material-icons">settings</span>SETTINGS</a></li>
         </ul>
     </nav>
-    <style>
-
-    </style>
-</head>
-<body>
 
     <div id="gameframe">
         <div class="game">
-          <iframe id="goonframe" src="404frame.html"></iframe>
+            <iframe id="goonframe" src="404frame.html"></iframe>
         </div>
         <div class="options">
-          <button class="refresh-button" id="refresh" aria-label="Refresh">
-            <i class="fas fa-redo"></i>
-          </button>
-          <button class="fullscreen-button" id="fullscreen" aria-label="Fullscreen">
-            <i class="fas fa-expand"></i>
-          </button>
+            <button class="refresh-button" id="refresh" aria-label="Refresh">
+                <i class="fas fa-redo"></i>
+            </button>
+            <button class="fullscreen-button" id="fullscreen" aria-label="Fullscreen">
+                <i class="fas fa-expand"></i>
+            </button>
         </div>
-      </div>
-      <div class="ad_right">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"
-        crossorigin="anonymous"></script>
-   <!-- page_ad_right -->
-   <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-1597620073084418"
-        data-ad-slot="7713679963"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-   <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
-      </div>
-      <div class="ad_left">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"
-        crossorigin="anonymous"></script>
-   <!-- page_ad_right -->
-   <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-1597620073084418"
-        data-ad-slot="7713679963"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-   <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
-      </div>
+    </div>
+
+    <!-- ad Containers -->
+    <div class="ad_right">
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-1597620073084418"
+            data-ad-slot="7713679963"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    </div>
+    <div class="ad_left">
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-1597620073084418"
+            data-ad-slot="7713679963"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    </div>
+
     <script>
         function getUrlParameter(name) {
             name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -88,24 +134,24 @@
             var results = regex.exec(location.search);
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         }
-    
+
         var url = getUrlParameter('url');
         const iframe = document.getElementById('goonframe');
         const refreshButton = document.getElementById('refresh');
         const fullscreenButton = document.getElementById('fullscreen');
-    
-        if (url) { // self hosted checker
+
+        if (url) {
             if (url.startsWith('/hosted/')) {
                 iframe.src = url;
             } else {
                 iframe.src = 'static/embed.html#' + url;
             }
         }
-    
+
         refreshButton.addEventListener('click', () => {
             iframe.src = iframe.src;
         });
-    
+
         fullscreenButton.addEventListener('click', () => {
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
@@ -117,27 +163,29 @@
                 iframe.msRequestFullscreen();
             }
         });
-    </script> 
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const navbar = document.querySelector('.navbar');
-  const gameframe = document.getElementById('gameframe');
-  
-  if (navbar && gameframe) {
-    const navbarHeight = navbar.offsetHeight + 
-                        parseInt(getComputedStyle(navbar).marginTop) + 
-                        parseInt(getComputedStyle(navbar).marginBottom);
-    
-    gameframe.style.marginTop = `${navbarHeight + 20}px`; 
-  }
-});
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"
-    crossorigin="anonymous"></script>   
-       <!-- settings scripts i hope they work :) -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const gameframe = document.getElementById('gameframe');
+            
+            if (navbar && gameframe) {
+                const navbarHeight = navbar.offsetHeight + 
+                                    parseInt(getComputedStyle(navbar).marginTop) + 
+                                    parseInt(getComputedStyle(navbar).marginBottom);
+                
+                gameframe.style.marginTop = `${navbarHeight + 20}px`; 
+            }
+        });
+    </script>
+    
+
+    <!-- Other scripts -->
     <script src="scripts/cloak.js"></script>
-    <script src = "scripts/cloak.js" type = "application/javascript" ></script>
-    <!-- other scripts  if these dont work i wanna die-->
-    <script src = "scripts/particles.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/random-texts.js"></script>
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/panic.js"></script>
 </body>
 </html>

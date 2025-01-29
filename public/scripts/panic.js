@@ -2,7 +2,7 @@ function handlePanicKey(event) {
     const panicKey = localStorage.getItem('panicKey') || '`'; 
   
     if (event.key === panicKey) {
-      window.location.href = 'https://www.ixl.com'; 
+      window.location.href = 'https://google.com'; 
     }
   }
   

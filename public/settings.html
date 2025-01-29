@@ -3,6 +3,8 @@
   <head>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/particles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -30,7 +32,7 @@
     <nav class="navbar">
       <ul class="navbar-links left">
         <li>
-          <a href="/realindex.html"
+          <a href="/index.html"
             ><span class="material-icons"></span> VELARA
           </a>
         </li>
@@ -55,26 +57,17 @@
         </li>
       </ul>
     </nav>
-    <div id="particles-js">
-      <canvas
-        class="particles-js-canvas-el"
-        style="width: 100%; height: 100%"
-        width="264"
-        height="1757"
-      ></canvas>
-    </div>
+    <div id="particles-js"></div>
 
-    <!-- Settings Container -->
-    <div class="settings-container">
-      <!-- Panic Key Settings -->
+
+    <div style="text-align: center; align-content: center;" class="settings-container">
       <section id="panicKeySettings" class="settings-section">
         <h2>Panic Key Settings</h2>
         <p id="currentPanicKey">Current Panic Key: 2</p>
         <p id="instruction">Press the button below to change your panic key.</p>
-        <button onclick="changePanicKey()">Change Panic Key</button>
+        <button style="display: block; margin: 0 auto;" onclick="changePanicKey()">Change Panic Key</button>
       </section>
 
-      <!-- Tab Customization -->
       <section id="tabCustomization" class="settings-section">
         <h2>Tab Customization</h2>
         <form id="tabForm">
@@ -98,17 +91,15 @@
             />
           </label>
 
-          <button type="submit">Update Tab</button>
-          <button type="button" id="resetTab">Reset Tab</button>
+          <button style="display: block; margin: 0 auto;" type="submit">Update Tab</button>
+          <button style="display: block; margin: 0 auto;" type="button" id="resetTab">Reset Tab</button>
         </form>
       </section>
 
-      <!-- Debug Mode -->
       <section id="debugMode" class="settings-section">
         <h2>Debug Mode</h2>
         <p>Gives stats about the current page and performance.</p>
-        <button onclick="toggleDebugMode()">Enter Debug Mode</button>
-        <p>Debug mode inspired by Frogies Arcade.</p>
+        <button style="display: block; margin: 0 auto;" onclick="toggleDebugMode()">Enter Debug Mode</button>
         <div id="debugStats" style="display: none;">
           <p>FPS: <span id="fps">0</span></p>
           <p>CPU: <span id="cpu">0%</span></p>
@@ -117,9 +108,8 @@
     </div>
 
     
-    <!-- Scripts -->
+    <!-- scripts -->
     <script>
-      // Load saved tab title and favicon on page load
       window.addEventListener("load", function () {
         const savedTitle = localStorage.getItem("tabTitle");
         const savedFavicon = localStorage.getItem("favicon");
@@ -135,11 +125,9 @@
         }
       });
 
-      // Display current Panic Key
       document.getElementById("currentPanicKey").innerText =
         "Current Panic Key: " + (localStorage.getItem("panicKey") || "2");
 
-      // Change Panic Key Function
       function changePanicKey() {
         const newKey = prompt("Enter your new Panic Key:");
         if (newKey) {
@@ -150,7 +138,6 @@
         }
       }
 
-      // Tab Customization Form Handling
       const tabForm = document.getElementById("tabForm");
       tabForm.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -175,23 +162,19 @@
         alert("Tab customization updated!");
       });
 
-      // Reset Tab Functionality
       const resetTabButton = document.getElementById("resetTab");
       resetTabButton.addEventListener("click", function () {
-        // Reset tab title
-        document.title = "Velara"; // Default title
+        document.title = "Velara"; 
         localStorage.removeItem("tabTitle");
         document.getElementById("tabTitle").value = "";
 
-        // Reset favicon
         const favicon = document.getElementById("favicon");
-        favicon.href = "favicon.ico"; // Default favicon
+        favicon.href = "favicon.ico"; 
         localStorage.removeItem("favicon");
 
         alert("Tab customization reset to default!");
       });
 
-      // Debug Mode Functionality
       let animationFrameId;
       let lastFrameTime = performance.now();
       let fpsCounter = document.getElementById("fps");
@@ -201,15 +184,15 @@
         const debugStats = document.getElementById("debugStats");
         if (debugStats.style.display === "none") {
           debugStats.style.display = "block";
-          startDebugging(); // Start FPS and CPU monitoring
+          startDebugging(); 
         } else {
           debugStats.style.display = "none";
-          stopDebugging(); // Stop FPS and CPU monitoring
+          stopDebugging(); 
         }
       }
 
       function startDebugging() {
-        lastFrameTime = performance.now(); // Reset the frame time
+        lastFrameTime = performance.now(); 
         updateFPS();
       }
 
@@ -231,11 +214,9 @@
           cpuUsage = Math.round(usedMemory);
         }
 
-        // Update the FPS and CPU counters
         fpsCounter.textContent = fps;
         cpuCounter.textContent = cpuUsage + "%";
 
-        // Request the next frame
         animationFrameId = requestAnimationFrame(updateFPS);
       }
     </script>
