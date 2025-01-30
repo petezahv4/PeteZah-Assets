@@ -69,8 +69,10 @@
       </select>
     </div>
 
-    <div class="grid" id="game-grid">
-      <!-- games are loaded here -->
+    <div style="text-align: center; margin-top: 20px;">
+      <div class="grid" id="game-grid">
+        <!-- games loaded here -->
+      </div>
     </div>
 
     <!-- settings scripts i hope they work :) -->
@@ -155,6 +157,25 @@
       }
 
       document.addEventListener("DOMContentLoaded", loadGames);
+    </script>
+    <script>
+      fetch('json/gg.json')
+        .then(response => response.json())
+        .then(games => {
+          const gameGrid = document.getElementById('game-grid');
+    
+          games.forEach(game => {
+            const gameElement = document.createElement('a');
+            gameElement.href = game.link; 
+            gameElement.className = 'game';
+            gameElement.innerHTML = `
+              <img src="${game.imgpath}" alt="${game.name}" style="width: 100px; height: 100px;">
+              <p>${game.name}</p>
+            `;
+            gameGrid.appendChild(gameElement);
+          });
+        })
+        .catch(error => console.error('Error loading games:', error));
     </script>
   </body>
 </html>

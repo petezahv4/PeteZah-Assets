@@ -1,12 +1,19 @@
-.random-texts {
-  font-size: 1.4rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  color: #cccccc;
-  font-weight: 300;
+.container {
+  position: relative;
+  min-height: 100vh;
 }
 
+#random-texts {
+  font-size: 1.4rem;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 30vh; 
+  left: 50%;
+  transform: translate(-50%, 50%); 
+}
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -318,6 +325,8 @@ button {
   text-transform: uppercase;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+
 }
 
 .discord-button:hover {
@@ -400,6 +409,25 @@ button {
 }
 
 /* game container thing  */
+.grid-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .game-container {
   display: flex;
   flex-direction: column;
@@ -457,16 +485,6 @@ button {
 
 .game-container a:hover .game-img {
   transform: scale(1.05);
-}
-
-.grid {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 20px;
 }
 
 /* game search bar */
