@@ -7,6 +7,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/search.css"> 
 </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R26WEY1GMN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R26WEY1GMN');
+    </script>
+
+
+
 <body>
     <nav class="navbar">
         <ul class="navbar-links left">
@@ -20,18 +31,44 @@
             <li><a href="/s"><span class="material-icons">settings</span>SETTINGS</a></li>
         </ul>
     </nav>
-    <div class="search-bar">
+    <div class="search-bar center">
         <form id="uv-form">
             <input id="uv-search-engine" value="https://google.com/search?q=%s" type="hidden" />
-            <input id="uv-address" type="text" placeholder="Search with Google or enter a URL..." autocomplete="off" />
+            <input style="text-align: center;" id="uv-address" type="text" placeholder="Search the web freely..." autocomplete="off" />
         </form>
         <div class="desc left-margin">
             <p id="uv-error"></p>
             <pre id="uv-error-code"></pre>
         </div>
     </div>
+    <p id="random-number-1000-1000000"></p>
 
-        <!-- settings scripts-->
+    <style>
+      body {
+        overflow: hidden;
+      }
+    
+      #random-number-1000-1000000 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: -100px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+    
+    <script>
+      document.getElementById("random-number-1000-1000000").textContent = 
+        "Searches Today: " + new Intl.NumberFormat('en-US', {minimumIntegerDigits: 4}).format(
+          Math.floor(Math.random() * (1000000 - 1000 + 1)) + 1000
+        );
+    </script>
+    
+
+    
+    <!-- settings scripts-->
     <script src="scripts/cloak.js"></script>
     <script src="scripts/settings.js"></script>   
     <script src="scripts/autocomplete.js" defer></script> 
@@ -46,3 +83,4 @@
 
 </body>
 </html>
+
