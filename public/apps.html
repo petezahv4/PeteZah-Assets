@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/particles.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -42,9 +41,6 @@
       </ul>
       <ul class="navbar-links right">
         <li>
-          <a href="/m"><span class="material-icons">movie</span> MOVIES</a>
-        </li>
-        <li>
           <a href="/g"
             ><span class="material-icons">videogame_asset</span> GAMES</a
           >
@@ -60,8 +56,7 @@
         </li>
       </ul>
     </nav>
-    <div id="particles-js"></div>
-
+    <div id="particles-js">
 
 
     <div class="controls">
@@ -71,20 +66,18 @@
       </select>
     </div>
 
-    <div class="grid" style="margin-top: 20;" id="game-grid">
-      <!-- games are loaded here -->
+    <div style="text-align: center; margin-top: 20px;">
+      <div class="grid" id="game-grid">
+        <!-- games loaded here -->
+      </div>
     </div>
 
     <!-- settings scripts i hope they work :) -->
     <script src="scripts/cloak.js"></script>
-    <script src="scripts/settings.js"></script>
-    <script src="scripts/cloak.js"></script>
-    <script src="scripts/panic.js"></script>
     <!-- other scripts  if these dont work i wanna die-->
-    <script src="scripts/particles.js"></script>
+    <script src ="scripts/particles.js"></script>
     <script src="scripts/random-texts.js"></script>
-
->    
+    <script src="scripts/ads.js"></script>
     <script>
       async function loadGames() {
         try {
@@ -161,6 +154,25 @@
       }
 
       document.addEventListener("DOMContentLoaded", loadGames);
+    </script>
+    <script>
+      fetch('json/ag.json')
+        .then(response => response.json())
+        .then(games => {
+          const gameGrid = document.getElementById('game-grid');
+    
+          games.forEach(game => {
+            const gameElement = document.createElement('a');
+            gameElement.href = game.link; 
+            gameElement.className = 'game';
+            gameElement.innerHTML = `
+              <img src="${game.imgpath}" alt="${game.name}" style="width: 100px; height: 100px;">
+              <p>${game.name}</p>
+            `;
+            gameGrid.appendChild(gameElement);
+          });
+        })
+        .catch(error => console.error('Error loading games:', error));
     </script>
   </body>
 </html>

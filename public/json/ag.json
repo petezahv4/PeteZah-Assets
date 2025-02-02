@@ -2,37 +2,44 @@
     {
       "name": "YouTube",
       "imgpath": "youtube.png",
-      "link": "https://www.youtube.com/"
+      "link": "https://www.youtube.com/",
+      "category": "Video"
     },
     {
       "name": "Google",
       "imgpath": "google.png",
-      "link": "https://www.google.com/"
+      "link": "https://www.google.com/",
+      "category": "Search Engine"
     },
     {
       "name": "TikTok",
       "imgpath": "tiktok.png",
-      "link": "https://www.tiktok.com/"
+      "link": "https://www.tiktok.com/",
+      "category": "Video"
     },
     {
       "name": "Instagram",
       "imgpath": "instagram.png",
-      "link": "https://www.instagram.com/"
+      "link": "https://www.instagram.com/",
+      "category": "Social Media"
     },
     {
       "name": "Snapchat",
       "imgpath": "snapchat.png",
-      "link": "https://www.snapchat.com/"
+      "link": "https://www.snapchat.com/",
+      "category": "Social Media"
     },
     {
       "name": "Discord",
       "imgpath": "discord.png",
-      "link": "https://discord.com/"
+      "link": "https://discord.com/",
+      "category": "Communication"
     },
     {
       "name": "Facebook",
       "imgpath": "facebook.png",
-      "link": "https://www.facebook.com/"
+      "link": "https://www.facebook.com/",
+      "category": "Social Media"
     }
 ]
 
