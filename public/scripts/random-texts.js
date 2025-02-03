@@ -12,6 +12,7 @@ const splashTexts = [
   "V2 finally here",
   "contains no uranium 235",
   "V2 before GTA 6 is crazy",
+  "also try brunys ixl",
 ];
 
 const splashTextElement = document.getElementById("random-texts");
