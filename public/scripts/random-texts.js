@@ -9,6 +9,9 @@ const splashTexts = [
   "watermelon > chicken",
   "Velara > 55gms",
   "i dont know what this is",
+  "V2 finally here",
+  "contains no uranium 235",
+  "V2 before GTA 6 is crazy",
 ];
 
 const splashTextElement = document.getElementById("random-texts");
