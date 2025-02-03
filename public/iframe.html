@@ -13,63 +13,55 @@
     <title></title>
     
     <!-- ad switching script -->
-    <script>
-        const mainLinks = [
-            'https://minoritymath.buzz/',
-            'https://ilovelittlekids.buzz/',
-            'https://velara.buzz/',
-            'https://velara.cc/',
-            'https://sunsett.icu/',
-            'https://sunsett.cc/',
-            'https://gyattmath.buzz/',
-            'https://mathforkids.buzz/',
-            'https://thirdmath.buzz/',
-        ]
+     <script>
+        // Function to check if the current page is the main link (homepage)
+        function isMainLink() {
+            // Replace 'main-link-url' with the actual URL of your main link (e.g., homepage)
+            const mainLinkUrl = 'https://www.yourwebsite.com/';
+            return window.location.href === mainLinkUrl;
+        }
 
-
-        const currentUrl = window.location.href;
-
+        // Function to load AdSense ad
         function loadAdSense() {
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418';
-            script.crossOrigin = 'anonymous';
-            document.head.appendChild(script);
-            
-            window.addEventListener('load', () => {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            });
-        }
-
-        function loadAdsterra() {
-            const adContainers = document.querySelectorAll('.ad_right, .ad_left');
-            adContainers.forEach(container => {
-                container.innerHTML = '';
-            });
-
-            const configScript = document.createElement('script');
-            configScript.textContent = `
-                atOptions = {
-                    'key' : '78750820a236b42fa5dc2e228cad63a6',
-                    'format' : 'iframe',
-                    'height' : 600,
-                    'width' : 160,
-                    'params' : {}
-                };
+            const adContainer = document.getElementById('ad-container');
+            adContainer.innerHTML = `
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1597620073084418"
+                    crossorigin="anonymous"></script>
+                <!-- Vertical ad -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-1597620073084418"
+                    data-ad-slot="7983210107"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             `;
-            document.head.appendChild(configScript);
-
-            adContainers.forEach(container => {
-                const invokeScript = document.createElement('script');
-                invokeScript.src = '//www.highperformanceformat.com/78750820a236b42fa5dc2e228cad63a6/invoke.js';
-                container.appendChild(invokeScript);
-            });
         }
 
-        if (currentUrl === mainLink) {
-            loadAdSense();
+        // Function to load Adsterra ad
+        function loadAdsterra() {
+            const adContainer = document.getElementById('ad-container');
+            adContainer.innerHTML = `
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '688fc22ca04d7fe7571541438bf19d4e',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/688fc22ca04d7fe7571541438bf19d4e/invoke.js"></script>
+            `;
+        }
+
+        // Check if the current page is the main link and load the appropriate ad
+        if (isMainLink()) {
+            loadAdSense(); // Load AdSense if it's the main link
         } else {
-            loadAdsterra();
+            loadAdsterra(); // Load Adsterra if it's not the main link
         }
     </script>
 
@@ -190,3 +182,4 @@
     <script src="scripts/panic.js"></script>
 </body>
 </html>
+
