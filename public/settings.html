@@ -3,13 +3,18 @@
   <head>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/particles.css">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/particles.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -38,9 +43,7 @@
       </ul>
       <ul class="navbar-links right">
         <li>
-          <a href="/g"
-            ><span class="material-icons">videogame_asset</span> GAMES
-          </a>
+          <a href="/g"><span class="material-icons">videogame_asset</span> GAMES</a>
         </li>
         <li>
           <a href="/a"><span class="material-icons">apps</span> APPS</a>
@@ -54,6 +57,7 @@
       </ul>
     </nav>
     <div id="particles-js"></div>
+
 
     <div style="text-align: center; align-content: center;" class="settings-container">
       <section id="panicKeySettings" class="settings-section">
@@ -91,17 +95,11 @@
         </form>
       </section>
 
-      <section id="debugMode" class="settings-section">
-        <h2>Debug Mode</h2>
-        <p>Gives stats about the current page and performance.</p>
-        <button style="display: block; margin: 0 auto;" onclick="toggleDebugMode()">Enter Debug Mode</button>
-        <div id="debugStats" style="display: none;">
-          <p>FPS: <span id="fps">0</span></p>
-          <p>CPU: <span id="cpu">0%</span></p>
-        </div>
-      </section>
+
     </div>
 
+    
+    <!-- scripts -->
     <script>
       window.addEventListener("load", function () {
         const savedTitle = localStorage.getItem("tabTitle");
@@ -158,11 +156,13 @@
       const resetTabButton = document.getElementById("resetTab");
       resetTabButton.addEventListener("click", function () {
         document.title = "Velara";
+        document.title = "Velara"; 
         localStorage.removeItem("tabTitle");
         document.getElementById("tabTitle").value = "";
 
         const favicon = document.getElementById("favicon");
         favicon.href = "favicon.ico";
+        favicon.href = "favicon.ico"; 
         localStorage.removeItem("favicon");
 
         alert("Tab customization reset to default!");
@@ -178,14 +178,17 @@
         if (debugStats.style.display === "none") {
           debugStats.style.display = "block";
           startDebugging();
+          startDebugging(); 
         } else {
           debugStats.style.display = "none";
           stopDebugging();
+          stopDebugging(); 
         }
       }
 
       function startDebugging() {
         lastFrameTime = performance.now();
+        lastFrameTime = performance.now(); 
         updateFPS();
       }
 

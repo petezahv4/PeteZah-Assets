@@ -140,6 +140,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 9999;
 }
 
 #tabForm label {
@@ -149,6 +150,7 @@ button {
 }
 
 #tabForm input {
+  z-index: 9999;
   background-color: #2a2a2a;
   color: #e0e0e0;
   padding: 8px;
@@ -160,12 +162,14 @@ button {
 }
 
 #tabForm input:focus {
+  z-index: 9999;
   outline: none;
   border-color: #666666;
   box-shadow: 0 2px 0 #444444;
 }
 
 #tabForm input:active {
+  z-index: 9999;
   box-shadow: 0 1px 0 #1f1f1f;
   transform: translateY(1px);
 }
@@ -185,10 +189,12 @@ button {
 }
 
 .file-upload-input {
+  z-index: 9999;
   display: none;
 }
 
 .file-upload-label {
+  z-index: 9999;
   background-color: #3a3a3a;
   color: #e0e0e0;
   padding: 10px 20px;
@@ -202,11 +208,13 @@ button {
 }
 
 .file-upload-label:hover {
+  z-index: 9999;
   background-color: #292929;
   box-shadow: 0 3px 0 #1f1f1f;
 }
 
 .file-upload-label:active {
+  z-index: 9999;
   background-color: #1f1f1f;
   box-shadow: 0 1px 0 #161616;
   transform: translateY(2px);
