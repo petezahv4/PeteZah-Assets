@@ -10,6 +10,18 @@
     "imgpath": "1.png",
     "link": "/hosted/1/index.html",
     "category": "Strategy/Quiz/Puzzle"
+  },
+  {
+    "name": "10 Minutes Till Dawn",
+    "imgpath": "10minutestilldawn.png",
+    "link": "/hosted/10minutestilldawn/index.html",
+    "category": "Strategy/Quiz/Puzzle"
+  },
+  {
+    "name": "retrobowl",
+    "imgpath": "retrobowl.png",
+    "link": "/hosted/retrobowl/index.html",
+    "category": "Sports/Strategy"
   }
 ]
 
