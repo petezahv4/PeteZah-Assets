@@ -6,6 +6,12 @@
     "category": "Shooter"
   },
   {
+    "name": "roblox",
+    "imgpath": "roblox.png",
+    "link": "https://nowgg.lol/",
+    "category": "Action"
+  },
+  {
     "name": "1",
     "imgpath": "1.png",
     "link": "/hosted/1/index.html",
@@ -313,14 +319,8 @@
   },
   {
     "name": "clicker heros",
-    "imgpath": "clicker-heros.png",
+    "imgpath": "clicker-heroes.png",
     "link": "/hosted/clickerheros/index.html",
-    "category": "Defense"
-  },
-  {
-    "name": "clicker heroes",
-    "imgpath": "clickerheroes.png",
-    "link": "/hosted/clickerheroes/index.html",
     "category": "Defense"
   },
   {
@@ -352,7 +352,26 @@
     "imgpath": "cookieclicker.png",
     "link": "/hosted/cookieclicker/index.html",
     "category": "Puzzle"
-  }
+  },
+  {
+    "name": "Cooking Mama",
+    "imgpath": "cookingmama.png",
+    "link": "/hosted/cookingmama/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "crazytunnel",
+    "imgpath": "crazytunnel.png",
+    "link": "/hosted/crazytunnel/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "crazy tower",
+    "imgpath": "crimsonfantasia.png",
+    "link": "/hosted/crazytower/index.html",
+    "category": "Puzzle"
+  },
+  {
 
 ]
 
