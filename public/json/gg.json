@@ -366,12 +366,110 @@
     "category": "Puzzle"
   },
   {
-    "name": "crazy tower",
+    "name": "crimsofantasia",
     "imgpath": "crimsonfantasia.png",
-    "link": "/hosted/crazytower/index.html",
-    "category": "Puzzle"
+    "link": "/hosted/crimsofantasia/index.html",
+    "category": "Action"
   },
   {
+    "name": "crossyroad",
+    "imgpath": "crossy-road-logo.png",
+    "link": "/hosted/crossy/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "cs-go clicker",
+    "imgpath": "case1.png",
+    "link": "/hosted/csgoclicker/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "CutTheRope",
+    "imgpath": "cuttherope.png",
+    "link": "/hosted/cuttherope/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "dadish",
+    "imgpath": "dadish.png",
+    "link": "/hosted/dadish/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "dadish2",
+    "imgpath": "dadish2.png",
+    "link": "/hosted/dadish2/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "dadish3",
+    "imgpath": "dadish3.png",
+    "link": "/hosted/dadish3/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "deathrun",
+    "imgpath": "death.png",
+    "link": "/hosted/deathrun3d/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "diddykongracing",
+    "imgpath": "diddy.png",
+    "link": "/hosted/diddykongracing/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "dino",
+    "imgpath": "dino.png",
+    "link": "/hosted/dinogame/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "dogeminer",
+    "imgpath": "dogeminer.bmp",
+    "link": "/hosted/dogeminer/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "donkey kong",
+    "imgpath": "donkeykong.png",
+    "link": "/hosted/donkeykong/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "donkey kong 64",
+    "imgpath": "donkeykong64.png",
+    "link": "/hosted/donkeykong64/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "donkey kong country",
+    "imgpath": "donkeykongcountry.png",
+    "link": "/hosted/donkeykongcountry/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "doodlejump",
+    "imgpath": "doodlejump.png",
+    "link": "/hosted/doodlejump/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "eaglercraft",
+    "imgpath": "eagler.png",
+    "link": "/hosted/eagler1.8/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "eaglercraft 2",
+    "imgpath": "eaglercraft2.png",
+    "link": "/hosted/eaglercraft2/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "eaglercraft 3",
+  
 
 ]
 
