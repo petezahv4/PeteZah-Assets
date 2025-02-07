@@ -9,21 +9,353 @@
     "name": "1",
     "imgpath": "1.png",
     "link": "/hosted/1/index.html",
-    "category": "Strategy/Quiz/Puzzle"
+    "category": "Puzzle"
   },
   {
     "name": "10 Minutes Till Dawn",
     "imgpath": "10minutestilldawn.png",
     "link": "/hosted/10minutestilldawn/index.html",
-    "category": "Strategy/Quiz/Puzzle"
+    "category": "Puzzle"
   },
   {
     "name": "retrobowl",
     "imgpath": "retrobowl.png",
     "link": "/hosted/retrobowl/index.html",
-    "category": "Sports/Strategy"
+    "category": "strategy"
+  },
+  {
+    "name": "2048",
+    "imgpath": "2048.png",
+    "link": "/hosted/2048/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "dance of fire and ice",
+    "imgpath": "adofai.png",
+    "link": "/hosted/adofai/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "age of war",
+    "imgpath": "ageofwar.png",
+    "link": "/hosted/ageofwar/index.html",
+    "category": "Defense"
+  },
+  {
+    "name": "age of war 2",
+    "imgpath": "ageofwar2.webp",
+    "link": "/hosted/ageofwar2/index.html",
+    "category": "Defense"
+  },
+  {
+    "name": "altered beast",
+    "imgpath": "alteredbeast.png",
+    "link": "/hosted/alteredbeast/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "amazing rope police",
+    "imgpath": "amazing-strange-rope-police-vice-spider-vegas.jpg",
+    "link": "/hosted/amazingropepolice/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "amorphus",
+    "imgpath": "amorphus.png",
+    "link": "/hosted/amorphus/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "Among Us",
+    "imgpath": "amongus.png",
+    "link": "/hosted/amongus/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "animal crossing",
+    "imgpath": "animalcrossingwildworld.webp",
+    "link": "/hosted/animalcrossingwildworld/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "Aqua Park Slides",
+    "imgpath": "aquaparkslides.png",
+    "link": "/hosted/aquaparkslides/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "Backrooms2d",
+    "imgpath": "backrooms2d.png",
+    "link": "/hosted/backrooms2d/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "badicecream",
+    "imgpath": "bad-ice-cream.png",
+    "link": "/hosted/badicecream/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "badicecream2",
+    "imgpath": "bad-ice-cream-2.png",
+    "link": "/hosted/badicecream2/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "badicecream3",
+    "imgpath": "bad-ice-cream-3.png",
+    "link": "/hosted/badicecream3/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "badpiggies",
+    "imgpath": "badpiggies.png",
+    "link": "/hosted/badpiggies/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "badtimesimulator",
+    "imgpath": "badtimesimulator.png",
+    "link": "/hosted/badtimesimulator/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "baldisbasics",
+    "imgpath": "baldisbasics.png",
+    "link": "/hosted/baldisbasics/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "balisticchickens",
+    "imgpath": "balisticchickens.png",
+    "link": "/hosted/balisticchickens/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "balloonrun",
+    "imgpath": "balloonrun.png",
+    "link": "/hosted/balloonrun/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "banjopilot",
+    "imgpath": "banjopilot.png",
+    "link": "/hosted/banjopilot/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "banjokazooie",
+    "imgpath": "banjokazooie.png",
+    "link": "/hosted/banjokazooie/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "basketbros",
+    "imgpath": "basketbros.jpg",
+    "link": "/hosted/basketbros/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "basketrandom",
+    "imgpath": "basket-random.webp",
+    "link": "/hosted/basketrandom/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "battletoads",
+    "imgpath": "battletoads.webp",
+    "link": "/hosted/battletoads/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "bigredbutton",
+    "imgpath": "big-red-button.webp",
+    "link": "/hosted/bigredbutton/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "bitlife",
+    "imgpath": "bitlife.png",
+    "link": "/hosted/bitlife/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "bloxors",
+    "imgpath": "bloxors.png",
+    "link": "/hosted/bloxors/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "bomberman",
+    "imgpath": "bomberman.png",
+    "link": "/hosted/bomberman/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "bobtherobber2",
+    "imgpath": "bobtherobber2.jpeg",
+    "link": "/hosted/bobtherobber2/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "bowsers inside story",
+    "imgpath": "bowersersersinside.png",
+    "link": "/hosted/bowersersersinside/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "boxing random",
+    "imgpath": "boxingrandom.jpg",
+    "link": "/hosted/boxingrandom/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "boxing physics 2",
+    "imgpath": "boxingpysics.jpg",
+    "link": "/hosted/boxingphysics2/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "breaking the bank",
+    "imgpath": "breakingthebank.png",
+    "link": "/hosted/breakingthebank/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Ballons Tower Defense 1",
+    "imgpath": "btd.png",
+    "link": "/hosted/btd/btd/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "Ballons Tower Defense 2",
+    "imgpath": "btd.png",
+    "link": "/hosted/btd/btd2/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "Ballons Tower Defense 3",
+    "imgpath": "btd.png",
+    "link": "/hosted/btd/btd3/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "Ballons Tower Defense 4",
+    "imgpath": "btd.png",
+    "link": "/hosted/btd/btd4/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "Bubble Spinner ",
+    "imgpath": "bubblespinner.png",
+    "link": "/hosted/bubblespinner/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "bubble tanks 2",
+    "imgpath": "bubbletanks2.png",
+    "link": "/hosted/bubbletanks2/index.html",
+    "category": "Puzzle"
+  },
+  { 
+    "name": "Burger and Frights",
+    "imgpath": "burgerandfrights.png",
+    "link": "/hosted/burgerandfrights/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Burrito Bison",
+    "imgpath": "burritobision.gif",
+    "link": "/hosted/burritobison/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "Cactus McCoy",
+    "imgpath": "cactusmccoy.png",
+    "link": "/hosted/cactusmccoy/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "castlevania",
+    "imgpath": "castlevania.png",
+    "link": "/hosted/castlevania/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "celeste",
+    "imgpath": "celeste.png",
+    "link": "/hosted/celeste/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "Cell Machine",
+    "imgpath": "cellmachine.png",
+    "link": "/hosted/cellmachine/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "Champion Island",
+    "imgpath": "championisland.png",
+    "link": "/hosted/ChapionIsland/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "chess",
+    "imgpath": "chess.png",
+    "link": "/hosted/chess/index.html",
+    "category": "strategy"
+  },
+  {
+    "name": "chrono trigger",
+    "imgpath": "chronotrigger.png",
+    "link": "/hosted/chronotrigger/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "clicker heros",
+    "imgpath": "clicker-heros.png",
+    "link": "/hosted/clickerheros/index.html",
+    "category": "Defense"
+  },
+  {
+    "name": "clicker heroes",
+    "imgpath": "clickerheroes.png",
+    "link": "/hosted/clickerheroes/index.html",
+    "category": "Defense"
+  },
+  {
+    "name": "clusterrush",
+    "imgpath": "clusterrush.png",
+    "link": "/hosted/clusterrush/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "color switch",
+    "imgpath": "colorswitch.png",
+    "link": "/hosted/colorswitch/index.html",
+    "category": "Action"
+  },
+  {
+    "name": "connect 4",
+    "imgpath": "connect4.png",
+    "link": "/hosted/connect4/index.html",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Contra",
+    "imgpath": "Contra.png",
+    "link": "/hosted/Contra/index.html",
+    "category": "Nintendo"
+  },
+  {
+    "name": "Cookie Clicker",
+    "imgpath": "cookieclicker.png",
+    "link": "/hosted/cookieclicker/index.html",
+    "category": "Puzzle"
   }
+
 ]
+
 
 
 
