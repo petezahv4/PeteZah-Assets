@@ -52,6 +52,7 @@ just like make a pull request idfk
 ## Acknowledgments
 
  [Reesaldle](https://github.com/reesaldle-dev) - Owner/Developer
+ 
  [Willo](https://github.com/willoo0) - Developer/Sigma
 
 ## License
