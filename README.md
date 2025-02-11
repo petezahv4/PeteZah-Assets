@@ -38,8 +38,9 @@ Finally, visit localhost:80 (or just localhost) in your browser!!
 
 ## Technologies
 
-- [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet) - Powers our proxy
-- [TIW](https://github.com/KwazyMotoo/TIW-Static) - Proxy source code
+ [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet) - Powers our proxy
+ 
+ [TIW](https://github.com/KwazyMotoo/TIW-Static) - Proxy source code
 
 ## Contributing
 
@@ -51,7 +52,9 @@ just like make a pull request idfk
 
 ## Acknowledgments
 
-- [Reesaldle](https://github.com/reesaldle-dev) - Owner/Developer
+ [Reesaldle](https://github.com/reesaldle-dev) - Owner/Developer
+ 
+ [Willo](https://github.com/willoo0) - Developer/Sigma
 
 ## License
 

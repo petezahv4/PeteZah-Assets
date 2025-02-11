@@ -1,22 +1,29 @@
 <html>
     <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-R26WEY1GMN"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+  
+    gtag("config", "G-R26WEY1GMN");
+  </script>
 
-          gtag('config', 'G-7FN7LEVWXD');
-        </script>
-
-        <title>Banjo Tooie | Seraph</title>
+        <title>banjokazooie | Seraph</title>
         <link rel="shortcut icon" href="../../images/ico.ico">
         <style>
             body {
                 background-color: black;
-                color: white;
+                color: white;;
             }
         </style>
+        <script src="../../storage/js/cloak.js"></script>
     </head>
     <body>
         <div style="width:100%;height:100%;max-width:100%">
@@ -24,13 +31,12 @@
         </div>
         <script>
             EJS_player = "#game";
-            EJS_core = "n64";
+            EJS_core = "nds";
             EJS_color = "#000000";
             EJS_startOnLoaded = true;
-            EJS_pathtodata = "../../storage/emulatorjs/data/";
+            EJS_pathtodata = "/public/hosted/banjotooie/emjs/data";
             EJS_gameUrl = "Banjo-Tooie (USA).n64";
         </script>
-        <script src="../../storage/emulatorjs/data/loader.js"></script>
-        <script src="../../storage/js/cloak.js"></script>
+        <script src="/public/hosted/banjotooie/emjs/data/loader.js"></script>
     </body>
 </html>
