@@ -1,3 +1,5 @@
+importScripts("public/scripts/cloak.js");
+importScripts("public/scripts/settings.js");
 "use strict";
 let destination = "";
 
@@ -18,3 +20,4 @@ registerSW()
   .catch((err) => {
     alert(`Encountered error:\n${err}`);
   });
+
