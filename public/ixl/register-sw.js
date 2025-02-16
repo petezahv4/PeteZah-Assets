@@ -1,9 +1,8 @@
-
 "use strict";
 /**
  * Distributed with Ultraviolet and compatible with most configurations.
  */
-const stockSW = "/static/uv-sw.js";
+const stockSW = "/ixl/uv-sw.js";
 
 /**
  * List of hostnames that are allowed to run serviceworkers on http:
