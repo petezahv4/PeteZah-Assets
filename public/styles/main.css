@@ -9,6 +9,7 @@
   text-align: center;
   color: #fff;
   font-weight: 700;
+  margin: 0;
   position: absolute;
   top: 30vh; 
   left: 50%;
@@ -30,12 +31,12 @@ body {
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
-  margin-top: 180px; 
+  padding-top: 180px; 
 }
 
 
