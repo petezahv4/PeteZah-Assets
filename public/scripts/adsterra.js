@@ -1,4 +1,4 @@
-const blockedDomains = [
+    const blockedDomains = [
     'gyattmath.buzz',
     'ilovelittlekids.buzz',
     'mathforkids.buzz',
