@@ -130,9 +130,9 @@
           const games = await response.json();
           const gameGrid = document.getElementById("game-grid");
           const categorySelector = document.getElementById("category-selector");
-
+    
           games.sort((a, b) => a.name.localeCompare(b.name));
-
+    
           const categories = new Set(games.map((game) => game.category));
           categories.forEach((category) => {
             const option = document.createElement("option");
@@ -140,25 +140,26 @@
             option.textContent = category;
             categorySelector.appendChild(option);
           });
-
+    
           function displayGames(filteredGames) {
             gameGrid.innerHTML = "";
             filteredGames.forEach((game) => {
               const gameContainer = document.createElement("div");
               gameContainer.classList.add("game-container");
-
+    
               const gameLink = document.createElement("a");
               gameLink.href = `x?url=${game.link}`;
-
+    
               const gameImgDiv = document.createElement("div");
               gameImgDiv.classList.add("game-img");
               const gameImg = document.createElement("img");
               gameImg.src = `assets/game-imgs/${game.imgpath}`;
-
+              gameImg.loading = "lazy";
+    
               const gameNameDiv = document.createElement("div");
               gameNameDiv.classList.add("game-name");
               gameNameDiv.textContent = game.name;
-
+    
               gameImgDiv.appendChild(gameImg);
               gameLink.appendChild(gameImgDiv);
               gameLink.appendChild(gameNameDiv);
@@ -166,9 +167,9 @@
               gameGrid.appendChild(gameContainer);
             });
           }
-
+    
           displayGames(games);
-
+    
           const searchBar = document.getElementById("search-bar");
           searchBar.addEventListener("input", () => {
             const searchTerm = searchBar.value.toLowerCase();
@@ -181,7 +182,7 @@
             });
             displayGames(filteredGames);
           });
-
+    
           categorySelector.addEventListener("change", () => {
             const searchTerm = searchBar.value.toLowerCase();
             const selectedCategory = categorySelector.value;
@@ -197,9 +198,10 @@
           console.error("Error loading games:", error);
         }
       }
-
+    
       document.addEventListener("DOMContentLoaded", loadGames);
     </script>
+    
     <script>
       fetch('json/gg.json')
         .then(response => response.json())
@@ -211,7 +213,7 @@
             gameElement.href = game.link; 
             gameElement.className = 'game';
             gameElement.innerHTML = `
-              <img src="${game.imgpath}" alt="${game.name}" style="width: 100px; height: 100px;">
+              <img src="${game.imgpath}" alt="${game.name}" style="width: 100px; height: 100px;" loading="lazy">
               <p>${game.name}</p>
             `;
             gameGrid.appendChild(gameElement);
@@ -219,6 +221,7 @@
         })
         .catch(error => console.error('Error loading games:', error));
     </script>
+    
 
   </body>
 </html>
