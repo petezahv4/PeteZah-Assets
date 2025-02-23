@@ -148,7 +148,9 @@
               gameContainer.classList.add("game-container");
     
               const gameLink = document.createElement("a");
-              gameLink.href = `x?url=${game.link}`;
+              gameLink.href = game.link ? `x?url=${game.link}` : game.grdmca;
+              if (game.grdmca) gameLink.target = "_blank";
+              if (game.grdmca) gameLink.rel = "noopener noreferrer";
     
               const gameImgDiv = document.createElement("div");
               gameImgDiv.classList.add("game-img");
@@ -200,26 +202,6 @@
       }
     
       document.addEventListener("DOMContentLoaded", loadGames);
-    </script>
-    
-    <script>
-      fetch('json/gg.json')
-        .then(response => response.json())
-        .then(games => {
-          const gameGrid = document.getElementById('game-grid');
-    
-          games.forEach(game => {
-            const gameElement = document.createElement('a');
-            gameElement.href = game.link; 
-            gameElement.className = 'game';
-            gameElement.innerHTML = `
-              <img src="${game.imgpath}" alt="${game.name}" style="width: 100px; height: 100px;" loading="lazy">
-              <p>${game.name}</p>
-            `;
-            gameGrid.appendChild(gameElement);
-          });
-        })
-        .catch(error => console.error('Error loading games:', error));
     </script>
     
 

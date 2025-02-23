@@ -6,6 +6,16 @@
     "category": "Shooter"
   },
   {
+    "name": "!!Game Request",
+    "imgpath": "googleform.webp",
+    "grdmca": "https://docs.google.com/forms/d/160lZAUZy0FOcMXvnis_WBU9aNFw0hwj86wVu2cNqQyM/"
+  },
+    {
+      "name": "!!DMCA",
+      "imgpath": "DMCA.png",
+      "grdmca": "https://forms.gle/ycBqAigwCDyfpCND8"
+    },
+  {
     "name": "roblox",
     "imgpath": "roblox.png",
     "link": "https://nowgg.lol/",
