@@ -104,15 +104,6 @@
 
       <div class="container">
         <h2 id="random-texts">Loading...</h2>
-          <script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-SrVH8Ec1xPeFk6LJtTL5lHhYs0S2rJy2E5x1XKs/xvqkH3f0D2r5jy8q7p2U5xlu7vF" crossorigin="anonymous"></script>
-  <script>
-    var socket = io();
-
-    socket.on('userCount', function(data) {
-      document.getElementById('online-users').innerHTML = data.users;
-    });
-  </script>
-  <span id="online-users" style="font-size: 2rem; position: absolute; right: 20px; top: 20px;">0</span>
       </div>
       
       <div class="top-buttons">
@@ -152,10 +143,8 @@
         }
 
       </style>
-      
     </div>
   </body>
-
 </html>
 
 <!--
