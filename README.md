@@ -58,6 +58,6 @@ just like make a pull request idfk
 
 ## License
 
-// reesaldle please add this later
+[License](https://github.com/UseVelara/velara?tab=License-1-ov-file) 
 
 <div align="center">
