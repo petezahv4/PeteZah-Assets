@@ -125,30 +125,15 @@
     <script type="text/javascript" src="//www.highperformanceformat.com/cf23da806fa45b1db866d0efe7f2e33e/invoke.js"></script>
     <script>
         
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
-
         var url = getUrlParameter('url');
         const iframe = document.getElementById('goonframe');
         const refreshButton = document.getElementById('refresh');
         const fullscreenButton = document.getElementById('fullscreen');
 
-        if (url) {
-            if (url.startsWith('/hosted/')) {
-                iframe.src = url;
-            } else {
-                iframe.src = 'ixl/embed.html#' + url;
-            }
-        }
-
         refreshButton.addEventListener('click', () => {
             iframe.src = iframe.src;
         });
-
+        
         fullscreenButton.addEventListener('click', () => {
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
